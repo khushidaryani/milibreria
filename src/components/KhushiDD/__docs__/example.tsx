@@ -7,6 +7,9 @@ function Example(props: KhushiDDProps) {
             placeholder={props.placeholder}
             value={props.value}
             onChange={props.onChange}
+            size={props.size}
+            height={props.height}
+            width={props.width}
         />
     );
 }

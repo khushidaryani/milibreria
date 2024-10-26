@@ -33592,7 +33592,7 @@ process.env.NODE_ENV !== "production" && (Rk.propTypes = {
    */
   variant: d.oneOf(["filled", "outlined", "standard"])
 });
-function zF({ placeholder: a, value: u, onChange: c }) {
+function zF({ placeholder: a, value: u, onChange: c, size: v = "medium", height: m, width: b }) {
   return /* @__PURE__ */ Ne.jsx(
     Rk,
     {
@@ -33601,8 +33601,10 @@ function zF({ placeholder: a, value: u, onChange: c }) {
       value: u,
       onChange: c,
       variant: "outlined",
-      fullWidth: !0,
+      size: v,
       sx: {
+        height: m,
+        width: b,
         marginBottom: "16px",
         "& .MuiOutlinedInput-root": {
           "& fieldset": {

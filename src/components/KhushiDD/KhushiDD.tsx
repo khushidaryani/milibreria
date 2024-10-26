@@ -5,9 +5,12 @@ export interface KhushiDDProps {
     placeholder: string;
     value: string;
     onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    size?: 'small' | 'medium';
+    height?: string;
+    width?: string;
 }
 
-function KhushiDD({ placeholder, value, onChange }: KhushiDDProps) {
+function KhushiDD({ placeholder, value, onChange, size = 'medium', height, width }: KhushiDDProps) {
     return (
         <TextField
             type="email"
@@ -15,8 +18,10 @@ function KhushiDD({ placeholder, value, onChange }: KhushiDDProps) {
             value={value}
             onChange={onChange}
             variant="outlined"
-            fullWidth
+            size={size}
             sx={{
+                height: height, 
+                width: width, 
                 marginBottom: '16px',
                 '& .MuiOutlinedInput-root': {
                     '& fieldset': {

@@ -13,5 +13,8 @@ export const Default: Story = {
     placeholder: 'Ingrese su correo electrónico',
     value: '',
     onChange: (e) => console.log(e.target.value),
+    size: 'medium',
+    height: '40px',
+    width: '100%',
   },
 };
