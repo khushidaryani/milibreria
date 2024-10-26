@@ -1,0 +1,30 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as KhushiDD from "./KhushiDD.stories.tsx";
+
+<Meta of={KhushiDD} title="KhushiDD" />
+
+# KhushiDD
+
+Componente de campo de texto de correo electrónico, diseñado para entradas de email.
+
+#### Default Example
+
+<Canvas of={KhushiDD.Default} />
+
+## Usage
+
+```ts
+import { KhushiDD } from 'milibreria';
+
+function Example() {
+    const [email, setEmail] = useState("");
+
+    return (
+        <KhushiDD
+            placeholder="Ingrese su correo electrónico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+        />
+    );
+}

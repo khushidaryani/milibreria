@@ -1,0 +1,48 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example";
+import * as MyFavourite from "./myfavourite.stories";
+
+<Meta of={MyFavourite} title="MyFavourite" />
+
+# MyFavourite
+
+Componente de botón de icono de corazón para marcar como favorito.
+
+#### Primary Example
+
+<Canvas of={MyFavourite.Primary} />
+
+## Usage
+
+```tsx
+import MyFavourite from 'milibreria';
+
+function Example() {
+    return (
+        <MyFavourite
+            color="red"
+            onClick={() => alert("Icono Favorito activado")}
+        />
+    );
+}
+
+
+export default Example;
+```
+#### Disabled Example
+
+<Canvas of={MyFavourite.Disabled} />
+
+## Usage
+
+```ts
+import { MyFavourite } from 'milibreria';
+
+function Example() {
+    return (
+        <MyFavourite
+            color="gray"
+            disabled={true}
+        />
+    );
+}

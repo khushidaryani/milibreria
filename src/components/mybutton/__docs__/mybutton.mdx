@@ -1,0 +1,57 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as MyButton from "./mybutton.stories.tsx";
+
+<Meta of={MyButton} title="MyButton" />
+
+# MyButton
+
+Componente de botón personalizable con diferentes estilos y tamaños.
+
+#### Primary Example
+
+<Canvas of={MyButton.Primary} />
+
+## Usage
+
+```ts
+import { MyButton } from 'milibreria';
+
+function Example() {
+    return (
+        <MyButton
+            text="Suscribir"
+            txtcolor="white"
+            bgcolor="#921A40"
+            bordercolor="#921A40"
+            borderwidth="2px"
+            size="medium"
+            onClick={() => alert("Botón Suscribir")}
+        />
+    );
+}
+
+export default Example;
+```
+#### Secondary Example
+
+<Canvas of={MyButton.Secondary} />
+
+## Usage
+
+```ts
+import { MyButton } from 'milibreria';
+
+function Example() {
+    return (
+        <MyButton
+            text="Cancelar"
+            txtcolor="black"
+            bgcolor="#D9ABAB"
+            bordercolor="#D9ABAB"
+            borderwidth="1px"
+            size="small"
+            onClick={() => alert("Botón Cancelar")}
+        />
+    );
+}

@@ -1,0 +1,47 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as MyFavouriteBorder from "./myfavouriteborder.stories.tsx";
+
+<Meta of={MyFavouriteBorder} title="MyFavouriteBorder" />
+
+# MyFavouriteBorder
+
+Componente de botón de icono de corazón contorneado para marcar o desmarcar como favorito.
+
+#### Primary Example
+
+<Canvas of={MyFavouriteBorder.Primary} />
+
+## Usage
+
+```ts
+import { MyFavouriteBorder } from 'milibreria';
+
+function Example() {
+    return (
+        <MyFavouriteBorder
+            color="blue"
+            onClick={() => alert("Corazón contorneado activado")}
+        />
+    );
+}
+
+export default Example;
+```
+#### Disabled Example
+
+<Canvas of={MyFavouriteBorder.Disabled} />
+
+## Usage
+
+```ts
+import { MyFavouriteBorder } from 'milibreria';
+
+function Example() {
+    return (
+        <MyFavouriteBorder
+            color="lightgray"
+            disabled={true}
+        />
+    );
+}
